@@ -1,0 +1,50 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "umbrella_dev_db",
+    "host": "mariadb",
+    "dialect": "mysql"
+  },
+  "googleGeocoder": {
+    "provider": "google",
+    "httpAdapter": "https",
+    "apiKey": "AIzaSyD7bLYxZLiZ37Ef3bW7rplxkIwWAMX9CzY",
+    "formatter": null
+  },
+  "AWS":{
+    "accessKeyId": "AKIAIZ7SVEX4UZAATGHQ",
+    "secretAccessKey": "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",
+    "region": "ap-southeast-1",
+    "apiVersion":"2010-03-31"
+  },
+  "envoirnment": "dev",
+  "REDIS_PORT": 6379,
+  "REDIS_HOST":"redis",
+  "JWT_SALT":"JViorNB",
+  "port": 3000,
+  "db": {
+    "name": "umbrella_dev_db",
+    "user": "root",
+    "pass": "",
+    "host": "mariadb",
+    "port": 3306
+  },
+  "nexmo":{
+    "apiKey": "d665432e",
+    "apiSecret": "05ded31f3630cb85"
+  },
+  "mail":{
+    "auth": {
+      "user": "AKIAJVJZ5QLJLYMEMIBQ",
+      "pass": "AoZdViudu+0rBcy4MoDeqdl0DQN0uZsjKQhFODghk49+"
+    },
+    "port": 25,
+    "host": "email-smtp.us-east-1.amazonaws.com"
+  },
+  "facebook":{
+    "id":"142475749635054",
+    "secret": "a65cca5cd07c605dfcf0b33e4a6bf23c"
+
+  }
+}

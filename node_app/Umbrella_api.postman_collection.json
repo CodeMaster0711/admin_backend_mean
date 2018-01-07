@@ -1,0 +1,882 @@
+{
+	"id": "3baed514-b396-9d34-1853-5cb95f40f90e",
+	"name": "Add",
+	"description": "",
+	"order": [
+		"a9f1caa1-b5be-0d15-856d-3d6f622cc160",
+		"d5810a11-9953-4988-2fb2-fe87fb1254f5",
+		"426c0dec-8677-de7a-ad74-695a64a3f31b",
+		"babe2830-7351-0121-e9dd-4fff5fcc94ce",
+		"962c859c-f0cb-66a1-b226-b7e49918f042",
+		"e8db26ba-04a7-87f7-f540-5a4c2a0de837",
+		"80ede3af-0213-ebb2-860e-7c62243f49a3",
+		"2d5bb19b-a45a-25d2-34ac-f403c04766c0",
+		"0370dff3-b1da-9cd9-a703-6e3c5472e718",
+		"b27b9730-98c1-3645-7a17-69d3538ec640",
+		"e2784074-086c-29c5-0a19-1504080c0e7d",
+		"86167f78-2110-2457-04bc-b4307a84404b",
+		"00d8a58c-0aaf-1525-550a-d707ec9ec4c0",
+		"72329553-4117-7715-154b-72569857a16f",
+		"df6c193e-acfd-aec0-ed76-c2745ccc7efa",
+		"78a24714-009f-f4a0-e7e8-20b0bd98cc30",
+		"046a598e-ccb7-cb8f-4d5c-5b2d63d93e29",
+		"b0b22621-a941-b522-749a-e1f2baec0019",
+		"acf3e623-2c8b-156b-cf2d-45a3b6483134",
+		"dc2eb84a-91c2-ecb7-e72d-1b383a174e75",
+		"72b11a81-b0b8-162a-44f7-962c196a324b",
+		"37916303-7bb0-ab63-6047-56ee74008eb1",
+		"dd1de36c-c4f3-cb0e-21d5-4dc667b6e99c",
+		"15baa142-286e-efea-9f73-76d5275345ba",
+		"72daf514-8086-aa2c-489e-eaae6fe1999e",
+		"aaed2ebb-b1be-d2f1-1910-cca52622d0f4",
+		"03cbdb37-8435-d2ef-3047-a069c7b3e227"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "1411975",
+	"public": false,
+	"requests": [
+		{
+			"id": "00d8a58c-0aaf-1525-550a-d707ec9ec4c0",
+			"headers": "Content-Type: application/json\nAuthorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/bank",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599677932,
+			"name": "post Add Bank ",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": "{\n  \"payment_method_id\":1,\n  \"account\":567687,\n  \"simulated\": true,\n  \"name\": \"New\",\n  \"bank_name\":\"New bank\"\n}"
+		},
+		{
+			"id": "0370dff3-b1da-9cd9-a703-6e3c5472e718",
+			"headers": "Content-Type: application/json\nAuthorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/user/verify",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513609475725,
+			"name": "post verify",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": "{\n  \"code\":\"531232\"\n}"
+		},
+		{
+			"id": "03cbdb37-8435-d2ef-3047-a069c7b3e227",
+			"headers": "",
+			"headerData": [],
+			"url": "{{host}}/api/credit/cron",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513600458563,
+			"name": "crom",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": []
+		},
+		{
+			"id": "046a598e-ccb7-cb8f-4d5c-5b2d63d93e29",
+			"headers": "Content-Type: application/json\nAuthorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/credit/process",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599860771,
+			"name": "Trigger Process Loan",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_id\":156\n}"
+		},
+		{
+			"id": "15baa142-286e-efea-9f73-76d5275345ba",
+			"headers": "",
+			"headerData": [],
+			"url": "{{host}}/api/content/improve-score",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513600303162,
+			"name": "improve_score",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": []
+		},
+		{
+			"id": "2d5bb19b-a45a-25d2-34ac-f403c04766c0",
+			"headers": "Authorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/user/code",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599632531,
+			"name": "send code",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "37916303-7bb0-ab63-6047-56ee74008eb1",
+			"headers": "Authorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/user/delete",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513600229267,
+			"name": "Delete Account",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": []
+		},
+		{
+			"id": "426c0dec-8677-de7a-ad74-695a64a3f31b",
+			"headers": "",
+			"headerData": [],
+			"url": "{{host}}/api/country/settings",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513598107131,
+			"name": "get settings",
+			"description": "get settings and save settings in session",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "72329553-4117-7715-154b-72569857a16f",
+			"headers": "Authorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/credit/available",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599756045,
+			"name": "Get available credit",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "72b11a81-b0b8-162a-44f7-962c196a324b",
+			"headers": "Content-Type: application/json\nAuthorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/bank/update",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513600121986,
+			"name": "Update Bank Details",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": "{\n\t\"id\":138,\n\t\"name\":\"other\"\n}"
+		},
+		{
+			"id": "72daf514-8086-aa2c-489e-eaae6fe1999e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/country/not-support",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513765641957,
+			"name": "non_supported_country_lead",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": "{\n  \"country\":\"country\",\n  \"ip_address\":\"168.168.90.90\",\n  \"gps_location\":\"\",\n  \"email\":\"gooddddddddddgle@gmail.com\"\n}"
+		},
+		{
+			"id": "78a24714-009f-f4a0-e7e8-20b0bd98cc30",
+			"headers": "Content-Type: application/json\nAuthorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/credit/apply",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599819994,
+			"name": "Apply Loan",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": "{\n  \"apply_loan_amount\":300, \n  \"payment_term\":21, \n  \"user_payment_method_id\":138\n}"
+		},
+		{
+			"id": "80ede3af-0213-ebb2-860e-7c62243f49a3",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/user/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599070312,
+			"name": "login",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": " {\r\n   \"access_token\":\"yyyyyy\"\r\n }"
+		},
+		{
+			"id": "86167f78-2110-2457-04bc-b4307a84404b",
+			"headers": "",
+			"headerData": [],
+			"url": "{{host}}/api/credit/options",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599317786,
+			"name": "get Get payment options",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "962c859c-f0cb-66a1-b226-b7e49918f042",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/user",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513598938190,
+			"name": "post new user",
+			"description": "set new user data",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": " {\r\n   \"dob\":\"1994-01-05 00:00:00\", \"user_location\":\"odessa\",\r\n   \"access_token\":\"fghfhfgh\", \"phone_number\":\"+650931778\",\r\n   \"accept\":\"1\", \"signupByMob\": true, \"fbId\": \"44\"\r\n }\r\n"
+		},
+		{
+			"id": "a9f1caa1-b5be-0d15-856d-3d6f622cc160",
+			"headers": "",
+			"headerData": [],
+			"url": "{{host}}/api/country",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "// handle case where it is 304\n\nif (responseCode.code === 200) {\n    tests[\"Status code is 302 or 200\"] = true;\n    tests[\"Body contains cookies\"] = responseBody.has(\"cookies\");\n    \n    var body = JSON.parse(responseBody);\n    tests[\"Body contains cookie foo1\"] = 'foo1' in body.cookies;\n    tests[\"Body contains cookie foo2\"] = 'foo2' in body.cookies;\n\n}\nelse if (responseCode.code === 302) {\n    tests[\"Status code is 302 or 200\"] = true;\n    tests[\"Body has redirection message\"] = responseBody.has(\"Found. Redirecting to /cookies\")\n}\nelse {\n    tests[\"Status code is 302 or 200\"] = false;\n}\n\ntests[\"foo1 cookie is set\"] = _.get(postman.getResponseCookie('foo1'), 'value') === 'bar1';\n\ntests[\"foo2 cookie is set\"] = _.get(postman.getResponseCookie('foo2'), 'value') === 'bar2';",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"time": 1513755366710,
+			"name": "get country",
+			"description": null,
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"// handle case where it is 304",
+							"",
+							"if (responseCode.code === 200) {",
+							"    tests[\"Status code is 302 or 200\"] = true;",
+							"    tests[\"Body contains cookies\"] = responseBody.has(\"cookies\");",
+							"    ",
+							"    var body = JSON.parse(responseBody);",
+							"    tests[\"Body contains cookie foo1\"] = 'foo1' in body.cookies;",
+							"    tests[\"Body contains cookie foo2\"] = 'foo2' in body.cookies;",
+							"",
+							"}",
+							"else if (responseCode.code === 302) {",
+							"    tests[\"Status code is 302 or 200\"] = true;",
+							"    tests[\"Body has redirection message\"] = responseBody.has(\"Found. Redirecting to /cookies\")",
+							"}",
+							"else {",
+							"    tests[\"Status code is 302 or 200\"] = false;",
+							"}",
+							"",
+							"tests[\"foo1 cookie is set\"] = _.get(postman.getResponseCookie('foo1'), 'value') === 'bar1';",
+							"",
+							"tests[\"foo2 cookie is set\"] = _.get(postman.getResponseCookie('foo2'), 'value') === 'bar2';"
+						]
+					}
+				}
+			],
+			"rawModeData": "",
+			"descriptionFormat": null,
+			"variables": null
+		},
+		{
+			"id": "aaed2ebb-b1be-d2f1-1910-cca52622d0f4",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/user/login-via-fb",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513600436992,
+			"name": "login with fb token",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": "{\n    \"fbToken\":\"EAACEdEose0cBAL2ZConO0n2nuvSfqXWF07AcNhK9kAGrpVZBrRUcmrTYN47FzlWb2Ui84SZCfeYZAVgV0uZCGQew8szDh6WbOJ95fzkujcY6ZB1cApiZBdgFqhKbpIj8El5jA7CeqrBqgU2geOk1nCr6UhNo4tNU2GrZBcreAsNpc6XiVweTD2vnH154ZBFNQjzkZD\"\n}"
+		},
+		{
+			"id": "acf3e623-2c8b-156b-cf2d-45a3b6483134",
+			"headers": "Authorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/user/details",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599951810,
+			"name": "get  User Details",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": []
+		},
+		{
+			"id": "b0b22621-a941-b522-749a-e1f2baec0019",
+			"headers": "Authorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/credit?status=Active",
+			"queryParams": [
+				{
+					"key": "status",
+					"value": "Active",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599895344,
+			"name": "Get  loans",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": []
+		},
+		{
+			"id": "b27b9730-98c1-3645-7a17-69d3538ec640",
+			"headers": "Authorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/credit/analysis",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599650262,
+			"name": "get Trigger Credit Analysis ",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "babe2830-7351-0121-e9dd-4fff5fcc94ce",
+			"headers": "",
+			"headerData": [],
+			"url": "{{host}}/api/country/settings?lon=103.8&lat=1.3667",
+			"queryParams": [
+				{
+					"key": "lon",
+					"value": "103.8",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "lat",
+					"value": "1.3667",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513597897400,
+			"name": "country settings with coordinates",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": []
+		},
+		{
+			"id": "d5810a11-9953-4988-2fb2-fe87fb1254f5",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/country",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513597890088,
+			"name": "country by gps",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": " {\n   \"lon\":103.819836,\n   \"lat\":1.352083\n }"
+		},
+		{
+			"id": "dc2eb84a-91c2-ecb7-e72d-1b383a174e75",
+			"headers": "Content-Type: application/json\nAuthorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/user/update",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513765643486,
+			"name": "Update User Details",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\":\"rickya@gmail.com\"\n}"
+		},
+		{
+			"id": "dd1de36c-c4f3-cb0e-21d5-4dc667b6e99c",
+			"headers": "Authorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/user/payment-method",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513600296048,
+			"name": "get user_payment_methods",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": []
+		},
+		{
+			"id": "df6c193e-acfd-aec0-ed76-c2745ccc7efa",
+			"headers": "Content-Type: application/json\nAuthorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/credit/calculate",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599753402,
+			"name": "Calculate Loan",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": "{\n  \"apply_loan_amount\":300, \n  \"payment_term\": 21\n}"
+		},
+		{
+			"id": "e2784074-086c-29c5-0a19-1504080c0e7d",
+			"headers": "Authorization: JWT {{jwt_token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT {{jwt_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/credit/status",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599666824,
+			"name": "get Poll Credit Value & Status",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "e8db26ba-04a7-87f7-f540-5a4c2a0de837",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{host}}/api/user/api",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513599072844,
+			"name": "post user api",
+			"description": "",
+			"collectionId": "3baed514-b396-9d34-1853-5cb95f40f90e",
+			"responses": [],
+			"rawModeData": "{\r\n   \"fname\":\"Ricky\", \"mname\":\"\",\r\n    \"lname\":\"Mohan\", \"email\":\"lyud.a@gmail.com\",\r\n   \"dob\":\"1994-12-05 00:00:00\",\r\n   \"user_location\":\"{lat, long}\",\r\n   \"access_token\":\"yyyyyy\", \"phone_number\":\"+380931578064\",\r\n   \"accept\":\"1\", \"sex\":\"male\",\r\n   \"profilepic\":\"profilepic\",\r\n   \"relationship\":\"married\", \"signupByMob\": false\r\n }\r\n"
+		}
+	]
+}
