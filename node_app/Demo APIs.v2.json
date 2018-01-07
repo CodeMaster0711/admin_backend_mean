@@ -1,0 +1,88 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Demo APIs",
+		"_postman_id": "b03edf15-6338-ad5d-f246-191ce4dfc5fd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Activate Bank",
+			"request": {
+				"url": "http://api.getumbrella.io/api/secret/openbank",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "To Active Bank account, call multiple times if required"
+			},
+			"response": []
+		},
+		{
+			"name": "First  Withdraw",
+			"request": {
+				"url": "http://api.getumbrella.io/api/secret/firstwithdraw",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "Sucessfull first withdra"
+			},
+			"response": []
+		},
+		{
+			"name": "Second Fail  Withdraw",
+			"request": {
+				"url": "http://api.getumbrella.io/api/secret/secondwithdraw",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "Sucessfull first withdra"
+			},
+			"response": []
+		},
+		{
+			"name": "Third Success  Withdraw",
+			"request": {
+				"url": "http://api.getumbrella.io/api/secret/thirdwithdraw",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "Sucessfull first withdra"
+			},
+			"response": []
+		},
+		{
+			"name": "Fourth Fail  Withdraw",
+			"request": {
+				"url": "http://api.getumbrella.io/api/secret/fourthwithdraw",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "Sucessfull first withdra"
+			},
+			"response": []
+		},
+		{
+			"name": "Fifth Fail  Withdraw",
+			"request": {
+				"url": "http://api.getumbrella.io/api/secret/fifthwithdraw",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "Sucessfull first withdra"
+			},
+			"response": []
+		},
+		{
+			"name": "Reactivate User",
+			"request": {
+				"url": "http://api.getumbrella.io/api/secret/reactivate",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

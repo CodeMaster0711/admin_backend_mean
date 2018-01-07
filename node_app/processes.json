@@ -1,0 +1,8 @@
+{
+  "apps" : [{
+  "merge_logs"  : true,
+  "name"        : "server",
+  "script"      : "server.js",
+  "watch"       : true
+}]
+}

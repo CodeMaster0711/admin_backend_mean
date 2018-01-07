@@ -1,0 +1,101 @@
+version: "2.0"
+services:
+  ha:
+    image: nginx:1.13.7
+    ports:
+      - "80:80"
+    links:
+      - "application:app"
+    environment:
+      - NGINX_HOST=dev.api.umbrella.com
+      - NGINX_PORT=80
+    volumes:
+      - ./proxy/html:/usr/share/nginx/html/
+      - ./proxy/default.conf:/etc/nginx/conf.d/default.conf
+    expose:
+      - "80"
+    labels:
+      - 'traefik.backend=nginx'
+      - 'traefik.port=80'
+      - 'traefik.frontend.rule=Host:dev.api.umbrella.localhost'
+
+  db:
+    image: mariadb:10.0.28
+    environment: 
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true" 
+      MYSQL_DATABASE: "umbrella_dev_db"
+    ports:
+     - "3306:3306"
+    expose:
+      - "3306"
+    labels:
+      - 'traefik.backend=databse'
+      - 'traefik.port=3306'
+      - 'traefik.frontend.rule=Host:dev.mariadb.umbrella.localhost'
+
+  application:
+    build:
+       context: .
+       dockerfile: Dockerfile
+    links:
+      - "db:mariadb"
+      - "redis:redis"
+    volumes:
+     - "./node_app:/src/"
+    ports:
+     - "3000:3000"
+    expose:
+     - "3000"
+
+  redis:
+    image: redis:3.2.10
+    ports:
+     - "6379:6379"
+    expose:
+      - "6379"
+    labels:
+      - 'traefik.backend=redis'
+      - 'traefik.port=6379'
+      - 'traefik.frontend.rule=Host:dev.redis.umbrella.localhost'
+
+
+
+  portainer:
+    image: portainer/portainer
+    command: --no-auth
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+     - "9000:9000"
+    expose:
+      - "9000"
+    labels:
+      - 'traefik.backend=portainer'
+      - 'traefik.port=9000'
+      - 'traefik.frontend.rule=Host:dev.portainer.umbrella.localhost'
+
+  adminer:
+    image: wodby/adminer:4.3
+    restart: always
+    environment:
+      ADMINER_SALT: adminer-salt
+    links:
+      - "db:mariadb"
+    ports:
+      - 8080:9000
+    expose:
+      - "8080"
+    labels:
+      - 'traefik.backend=adminer'
+      - 'traefik.port=9000'
+      - 'traefik.frontend.rule=Host:dev.adminer.umbrella.localhost'
+
+  traefik:
+    image: traefik:1.4.5
+    command: -c /dev/null --web --docker --logLevel=INFO
+    ports:
+      - '8000:80'
+#      - '8080:8080' # Dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+

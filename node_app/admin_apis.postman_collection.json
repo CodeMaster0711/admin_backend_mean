@@ -1,0 +1,379 @@
+{
+	"info": {
+		"name": "admin_apis",
+		"_postman_id": "cccfef13-a2c0-a477-4267-77d6a70a8b49",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n   \"userName\":\"test\",\r\n   \"password\": \"22222\"\r\n }"
+				},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user",
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "forget-password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"test@test.com\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user/forget-password",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user",
+						"forget-password"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "reset-password",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"password\":\"55555\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user/reset/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTE1MDk1MDMxLCJleHAiOjE1MTUxMDIyMzF9.JFzZYOk2j_TQLZb0LtCezMNU4uCr3VlFRBsi9AaLn3g",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user",
+						"reset",
+						"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTE1MDk1MDMxLCJleHAiOjE1MTUxMDIyMzF9.JFzZYOk2j_TQLZb0LtCezMNU4uCr3VlFRBsi9AaLn3g"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "change-password",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "JWT {{jwt_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"password\": \"55555\",\n\t\"new_password\": \"22222\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user/change-password",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user",
+						"change-password"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "JWT {{jwt_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user/logout",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user",
+						"logout"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "renew-session",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "JWT {{jwt_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user/renew-session",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user",
+						"renew-session"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "md5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user/md5/22222",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user",
+						"md5",
+						"22222"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get all Admin users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "JWT {{jwt_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get by id admin-user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "JWT {{jwt_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create admin-user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "JWT {{jwt_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test 2\",\n    \"email\": \"test2@test.com\",\n    \"password\": \"33333\",\n    \"company_id\": 1,\n    \"role_id\": 1,\n    \"number_password_attempt\": 1,\n    \"max_session_time\": 1111151511,\n    \"FAfield\": \"ssssss\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update by id admin-user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "JWT {{jwt_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n    \"name\": \"test2\",\n    \"email\": \"test2@test.com\",\n    \"company_id\": 1,\n    \"role_id\": 1,\n    \"number_password_attempt\": 0,\n    \"max_session_time\": 11111113,\n    \"FAfield\": \"asdasd dasd\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user/4",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user",
+						"4"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete by id admin-user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "JWT {{jwt_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{host}}/api/admin/admin-user/3",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"admin-user",
+						"3"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
